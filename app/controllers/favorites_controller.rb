@@ -10,7 +10,7 @@ class FavoritesController < ApplicationController
   end
 
   def index
-    @favorites = Favorite.all
+    @favorites = Favorite.page(params[:page]).per(10)
 
     render("favorite_templates/index.html.erb")
   end
