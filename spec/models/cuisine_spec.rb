@@ -4,6 +4,8 @@ RSpec.describe Cuisine, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:favorites) }
+
     it { should have_many(:dishes) }
 
     end
