@@ -13,17 +13,21 @@
 
       <!-- Edit link favorite start -->
       <div class="col">
-        <a href="/favorites/<%= @favorite.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit favorite
-        </a>
+        <% if current_user == @favorite.user %>
+          <a href="/favorites/<%= @favorite.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit favorite
+          </a>
+        <% end %>
       </div>
       <!-- Edit link favorite end -->
 
       <!-- Delete link favorite start -->
       <div class="col">
-        <a href="/delete_favorite/<%= @favorite.id %>" class="btn btn-block btn-outline-secondary">
-          Delete favorite
-        </a>
+        <% if current_user == @favorite.user %>
+          <a href="/delete_favorite/<%= @favorite.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete favorite
+          </a>
+        <% end %>
       </div>
       <!-- Delete link favorite end -->
     </div>
