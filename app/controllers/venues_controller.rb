@@ -55,6 +55,14 @@ class VenuesController < ApplicationController
     end
   end
 
+  def destroy_row_from_neighborhood
+    @venue = Venue.find(params.fetch("id_to_remove"))
+
+    @venue.destroy
+
+    redirect_to("/neighborhoods/#{@venue.neighborhood_id}", notice: "Venue deleted successfully.")
+  end
+
   def destroy_row
     @venue = Venue.find(params.fetch("id_to_remove"))
 

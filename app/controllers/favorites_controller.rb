@@ -57,6 +57,38 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def destroy_row_from_dish
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/dishes/#{@favorite.dish_id}", notice: "Favorite deleted successfully.")
+  end
+
+  def destroy_row_from_cuisine
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/cuisines/#{@favorite.cuisine_id}", notice: "Favorite deleted successfully.")
+  end
+
+  def destroy_row_from_venue
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/venues/#{@favorite.venue_id}", notice: "Favorite deleted successfully.")
+  end
+
+  def destroy_row_from_user
+    @favorite = Favorite.find(params.fetch("id_to_remove"))
+
+    @favorite.destroy
+
+    redirect_to("/users/#{@favorite.user_id}", notice: "Favorite deleted successfully.")
+  end
+
   def destroy_row
     @favorite = Favorite.find(params.fetch("id_to_remove"))
 

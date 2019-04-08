@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Venues
+
+    <a data-toggle="collapse" href="#neighborhood_venues_new_form">
+      Add venue
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @neighborhood.venues.each do |venue| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/venues/<%= venue.id %>">
+          <%= venue.address %>
+        </a>
+        <!-- Show link end -->
+
+        <!-- Delete link start -->
+        <a href="/delete_venue_from_neighborhood/<%= venue.id %>">
+          Delete
+        </a>
+        <!-- Delete link end -->
+
+      </li>
+    <% end %>
+
+    <div class="card-footer">
+      <div class="collapse" id="neighborhood_venues_new_form">
+        <!-- New associationcollection form start -->
+
+        <!-- New associationcollection form end -->
+      </div>
+    </div>
+
+  </ul>
+</div>
