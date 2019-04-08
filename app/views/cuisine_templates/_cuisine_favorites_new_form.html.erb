@@ -21,7 +21,7 @@
     </label>
 
     <!-- Input for venue_id start -->
-    <input type="text" id="venue_id" name="venue_id" class="form-control" value="<%= @favorite.venue_id %>">
+    <%= select_tag(:venue_id, options_from_collection_for_select(Venue.all, :id, :address, @favorite.venue_id), :class => "form-control") %>
     <!-- Input for venue_id end -->
   </div>
   <!-- Label and input for venue_id end -->
