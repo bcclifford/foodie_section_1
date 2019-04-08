@@ -94,7 +94,7 @@ class FavoritesController < ApplicationController
   def update_row
     @favorite = Favorite.find(params.fetch("id_to_modify"))
 
-    @favorite.user_id = params.fetch("user_id")
+    
     @favorite.venue_id = params.fetch("venue_id")
     @favorite.dish_id = params.fetch("dish_id")
     @favorite.cuisine_id = params.fetch("cuisine_id")
