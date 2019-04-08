@@ -1,0 +1,56 @@
+<h1>
+  Edit venue #<%= @venue.id %>
+</h1>
+
+<hr>
+
+<!-- Form venue start -->
+<form action="/update_venue/<%= @venue.id %>" method="post">
+<!-- Form venue end -->
+
+  <!-- Label and input for address start -->
+  <div class="form-group">
+    <label for="address">
+      Address
+    </label>
+
+    <!-- Input for address start -->
+    <input type="text" id="address" name="address" class="form-control" value="<%= @venue.address %>">
+    <!-- Input for address end -->
+  </div>
+  <!-- Label and input for address end -->
+
+  <!-- Label and input for neighborhood_id start -->
+  <div class="form-group">
+    <label for="neighborhood_id">
+      Neighborhood
+    </label>
+
+    <!-- Input for neighborhood_id start -->
+    <input type="text" id="neighborhood_id" name="neighborhood_id" class="form-control" value="<%= @venue.neighborhood_id %>">
+    <!-- Input for neighborhood_id end -->
+  </div>
+  <!-- Label and input for neighborhood_id end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @venue.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update venue
+  </button>
+</form>
+
+<hr>
+
+<a href="/venues">
+  Go back
+</a>
