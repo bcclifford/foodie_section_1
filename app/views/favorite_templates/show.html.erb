@@ -38,7 +38,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @favorite.user_id %>
+        <% if @favorite.user.present? %>
+          <a href="/users/<%= @favorite.user_id %>">
+            <%= @favorite.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 
@@ -47,7 +51,11 @@
       </dt>
       <!-- Display venue_id start -->
       <dd>
-        <%= @favorite.venue_id %>
+        <% if @favorite.venue.present? %>
+          <a href="/venues/<%= @favorite.venue_id %>">
+            <%= @favorite.venue.address %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display venue_id end -->
 
@@ -56,7 +64,11 @@
       </dt>
       <!-- Display dish_id start -->
       <dd>
-        <%= @favorite.dish_id %>
+        <% if @favorite.dish.present? %>
+          <a href="/dishes/<%= @favorite.dish_id %>">
+            <%= @favorite.dish.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display dish_id end -->
 
@@ -65,7 +77,11 @@
       </dt>
       <!-- Display cuisine_id start -->
       <dd>
-        <%= @favorite.cuisine_id %>
+        <% if @favorite.cuisine.present? %>
+          <a href="/cuisines/<%= @favorite.cuisine_id %>">
+            <%= @favorite.cuisine.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display cuisine_id end -->
 

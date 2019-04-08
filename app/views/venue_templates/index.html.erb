@@ -68,7 +68,11 @@
 
         <!-- Display venue.neighborhood_id start -->
         <td>
-          <%= venue.neighborhood.name %>
+          <% if venue.neighborhood.present? %>
+            <a href="/neighborhoods/<%= venue.neighborhood.id %>">
+              <%= venue.neighborhood.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display venue.neighborhood_id end -->
 
