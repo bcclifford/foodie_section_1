@@ -11,58 +11,46 @@
         </a>
       </div>
 
-      <!-- Edit link neighborhood start -->
       <div class="col">
         <a href="/neighborhoods/<%= @neighborhood.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit neighborhood
         </a>
       </div>
-      <!-- Edit link neighborhood end -->
 
-      <!-- Delete link neighborhood start -->
       <div class="col">
         <a href="/delete_neighborhood/<%= @neighborhood.id %>" class="btn btn-block btn-outline-secondary">
           Delete neighborhood
         </a>
       </div>
-      <!-- Delete link neighborhood end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @neighborhood.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@neighborhood.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@neighborhood.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "neighborhood_templates/neighborhood_venues" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link favorite start -->
       <div class="col">
         <% if current_user == @favorite.user %>
           <a href="/favorites/<%= @favorite.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link favorite end -->
 
-      <!-- Delete link favorite start -->
       <div class="col">
         <% if current_user == @favorite.user %>
           <a href="/delete_favorite/<%= @favorite.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link favorite end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @favorite.user.present? %>
           <a href="/users/<%= @favorite.user_id %>">
@@ -44,12 +39,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Venue
       </dt>
-      <!-- Display venue_id start -->
       <dd>
         <% if @favorite.venue.present? %>
           <a href="/venues/<%= @favorite.venue_id %>">
@@ -57,12 +50,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display venue_id end -->
 
       <dt>
         Dish
       </dt>
-      <!-- Display dish_id start -->
       <dd>
         <% if @favorite.dish.present? %>
           <a href="/dishes/<%= @favorite.dish_id %>">
@@ -70,12 +61,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display dish_id end -->
 
       <dt>
         Cuisine
       </dt>
-      <!-- Display cuisine_id start -->
       <dd>
         <% if @favorite.cuisine.present? %>
           <a href="/cuisines/<%= @favorite.cuisine_id %>">
@@ -83,28 +72,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display cuisine_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@favorite.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@favorite.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
