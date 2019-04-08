@@ -6,6 +6,7 @@ class NeighborhoodsController < ApplicationController
   end
 
   def show
+    @venue = Venue.new
     @neighborhood = Neighborhood.find(params.fetch("id_to_display"))
 
     render("neighborhood_templates/show.html.erb")

@@ -1,0 +1,49 @@
+<!-- Form favorite start -->
+<form action="/create_favorite_from_dish" method="post">
+<!-- Form favorite end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @favorite.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for venue_id start -->
+  <div class="form-group">
+    <label for="venue_id">
+      Venue
+    </label>
+
+    <!-- Input for venue_id start -->
+    <input type="text" id="venue_id" name="venue_id" class="form-control" value="<%= @favorite.venue_id %>">
+    <!-- Input for venue_id end -->
+  </div>
+  <!-- Label and input for venue_id end -->
+
+  <!-- Label and input for dish_id start -->
+  <!-- Input for dish_id start -->
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <!-- Input for dish_id end -->
+
+  <!-- Label and input for cuisine_id start -->
+  <div class="form-group">
+    <label for="cuisine_id">
+      Cuisine
+    </label>
+
+    <!-- Input for cuisine_id start -->
+    <input type="text" id="cuisine_id" name="cuisine_id" class="form-control" value="<%= @favorite.cuisine_id %>">
+    <!-- Input for cuisine_id end -->
+  </div>
+  <!-- Label and input for cuisine_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create favorite
+  </button>
+</form>

@@ -6,6 +6,8 @@ class CuisinesController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.new
+    @dish = Dish.new
     @cuisine = Cuisine.find(params.fetch("id_to_display"))
 
     render("cuisine_templates/show.html.erb")
